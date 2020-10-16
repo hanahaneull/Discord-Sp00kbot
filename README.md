@@ -52,7 +52,7 @@ You can have multiple guild to snipe on.
 
 ERROR: `if (!note.length) note = null;`
 
-Fix see issue [#1](https://github.com/hanahaneull/Discord-Sp00kbot/issues/1)
+Fix see issue [#1](https://github.com/hanahaneull/Discord-Sp00kbot/issues/1#issuecomment-709845832)
 
 ## Disclaimer
 
