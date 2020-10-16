@@ -42,11 +42,12 @@ spook.on('ready', () => {
 
 spook.on('message', async (msg) => {
 	if (msg.author.id !== '755580145078632508') return;
-	if (msg.guild.id !== config.sp00kguild) return;
+	//if (msg.guild.id !== config.sp00kguild) return;
+	if (!config.sp00kguild.includes(msg.guild.id)) return;
 
 	if (msg.embeds[0].description.includes('h!trick')) {
 		const MonsterName = msg.embeds[0].image.url.slice(41, -4);
-		console.log(`${MonsterName} Spawn...`);
+		console.log(`${MonsterName} Spawn at ${msg.guild.name}`);
 		switch (config.monster) {
 			case true:
 				msg.channel.send('h!treat');
@@ -54,8 +55,9 @@ spook.on('message', async (msg) => {
 				if (
 					checkmessage1.embeds[0].description.includes(`<@${spook.user.id}>`)
 				) {
-					console.log(`Success spooking ${MonsterName}`);
-				} else console.log(`Failed spooking ${MonsterName}`);
+					console.log(`Success spooking ${MonsterName} at ${msg.guild.name}`);
+				} else
+					console.log(`Failed spooking ${MonsterName} at ${msg.guild.name}`);
 				break;
 
 			case false:
@@ -64,15 +66,16 @@ spook.on('message', async (msg) => {
 				if (
 					checkmessage2.embeds[0].description.includes(`<@${spook.user.id}>`)
 				) {
-					console.log(`Success spooking ${MonsterName}`);
-				} else console.log(`Failed spooking ${MonsterName}`);
+					console.log(`Success spooking ${MonsterName} at ${msg.guild.name}`);
+				} else
+					console.log(`Failed spooking ${MonsterName} at ${msg.guild.name}`);
 				break;
 		}
 		return;
 	}
 	if (msg.embeds[0].description.includes('h!treat')) {
 		const MonsterName = msg.embeds[0].image.url.slice(41, -4);
-		console.log(`${MonsterName} Spawn...`);
+		console.log(`${MonsterName} Spawn at ${msg.guild.name}`);
 		switch (config.monster) {
 			case true:
 				await msg.channel.send('h!trick');
@@ -80,8 +83,9 @@ spook.on('message', async (msg) => {
 				if (
 					checkmessage1.embeds[0].description.includes(`<@${spook.user.id}>`)
 				) {
-					console.log(`Success spooking ${MonsterName}`);
-				} else console.log(`Failed spooking ${MonsterName}`);
+					console.log(`Success spooking ${MonsterName} at ${msg.guild.name}`);
+				} else
+					console.log(`Failed spooking ${MonsterName} at ${msg.guild.name}`);
 				break;
 
 			case false:
@@ -90,8 +94,9 @@ spook.on('message', async (msg) => {
 				if (
 					checkmessage2.embeds[0].description.includes(`<@${spook.user.id}>`)
 				) {
-					console.log(`Success spooking ${MonsterName}`);
-				} else console.log(`Failed spooking ${MonsterName}`);
+					console.log(`Success spooking ${MonsterName} at ${msg.guild.name}`);
+				} else
+					console.log(`Failed spooking ${MonsterName} at ${msg.guild.name}`);
 				break;
 		}
 		return;
