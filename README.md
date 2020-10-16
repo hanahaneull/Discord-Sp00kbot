@@ -12,7 +12,7 @@ There is 2 mode for this claimer
 
 ### Monster
 
-On this mode you will be sending the wrong command to claim the monster, so the Monster will be unvaiable for everyone to claim.
+On this mode you will be sending the wrong command to claim the monster, so the Monster will be unvailable for everyone to claim.
 
 ### Non monster
 
@@ -22,6 +22,7 @@ On this mode you will be sending the right command to claim the monster.
 
 1. Monster/Non-monster mode
 2. Monster name logging (Based on image name)
+3. Multi-server support
 
 ## Installation guide
 
@@ -43,7 +44,9 @@ Your discord token. **Keep it secret**.
 
 ### Sp00kGuild
 
-Guild id for focusing sniper on.
+Guild id for focusing snipe on.
+
+You can have multiple guild to snipe on.
 
 ## Troubleshooting
 
@@ -53,9 +56,9 @@ Fix see issue [#1](https://github.com/hanahaneull/Discord-Sp00kbot/issues/1)
 
 ## Disclaimer
 
-Selfbot are againt Discord TOS
+Selfbot are againt Discord TOS.
 
-I'm not responsible if something happens to your account
+I'm not responsible if something happens to .your account
 
 ## Contributing
 
