@@ -50,6 +50,7 @@ spook.on('message', async (msg) => {
 		console.log(`${MonsterName} Spawn at ${msg.guild.name}`);
 		switch (config.monster) {
 			case true:
+				sleep(config.delay)
 				msg.channel.send('h!treat');
 				const checkmessage1 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -61,6 +62,7 @@ spook.on('message', async (msg) => {
 				break;
 
 			case false:
+				sleep(config.delay)
 				msg.channel.send('h!trick');
 				const checkmessage2 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -78,6 +80,7 @@ spook.on('message', async (msg) => {
 		console.log(`${MonsterName} Spawn at ${msg.guild.name}`);
 		switch (config.monster) {
 			case true:
+				sleep(config.delay)
 				await msg.channel.send('h!trick');
 				const checkmessage1 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -89,6 +92,7 @@ spook.on('message', async (msg) => {
 				break;
 
 			case false:
+				sleep(config.delay)
 				await msg.channel.send('h!treat');
 				const checkmessage2 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -102,5 +106,15 @@ spook.on('message', async (msg) => {
 		return;
 	}
 });
+
+// This is a horrible way of sleeping, however I couldn't find a way to sleep with setInterval / setTimeout 
+function sleep(ms)
+{
+	var date1 = new Date();
+    var date2 = null;
+    do { date2 = new Date(); }
+    while(date2-date1 < ms);
+}
+
 
 spook.login(config.token);

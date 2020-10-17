@@ -26,6 +26,7 @@ On this mode you will be sending the right command to claim the monster.
 1. Monster/Non-monster mode
 2. Monster name logging (Based on image name)
 3. Multi-server support
+4. Optional delay before sending command
 
 ## Installation guide
 
@@ -50,6 +51,12 @@ Your discord token. **Keep it secret**.
 Guild id for focusing snipe on.
 
 You can have multiple guild to snipe on.
+
+### Delay
+
+Adds a delay (in milliseconds) before sending the message to trick or treat.
+
+Set as `0` for no delay
 
 ## Troubleshooting
 
