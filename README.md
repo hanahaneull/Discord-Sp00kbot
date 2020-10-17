@@ -1,3 +1,6 @@
+<div align="center"><img src="https://miro.medium.com/max/700/1*znYs3T_o7yLyBwY4rPHSvQ.png"></div>
+<div align="center"><img src="https://lewd.pics/p/wZw4.png"></div>
+
 # Sp00kbot
 
 Discord `Trick'cord Treat#1944` claimer.
@@ -52,13 +55,13 @@ You can have multiple guild to snipe on.
 
 ERROR: `if (!note.length) note = null;`
 
-Fix see issue [#1](https://github.com/hanahaneull/Discord-Sp00kbot/issues/1#issuecomment-709845832)
+Fix: #1
 
 ## Disclaimer
 
 Selfbot are againt Discord TOS.
 
-I'm not responsible if something happens to .your account
+I'm not responsible if something happens to your account.
 
 ## Contributing
 
