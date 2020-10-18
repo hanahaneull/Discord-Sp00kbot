@@ -50,6 +50,7 @@ spook.on('message', async (msg) => {
 		console.log(`${MonsterName} Spawn at ${msg.guild.name}`);
 		switch (config.monster) {
 			case true:
+				await sleep(config.delay)
 				msg.channel.send('h!treat');
 				const checkmessage1 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -61,6 +62,7 @@ spook.on('message', async (msg) => {
 				break;
 
 			case false:
+				await sleep(config.delay)
 				msg.channel.send('h!trick');
 				const checkmessage2 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -78,6 +80,7 @@ spook.on('message', async (msg) => {
 		console.log(`${MonsterName} Spawn at ${msg.guild.name}`);
 		switch (config.monster) {
 			case true:
+				await sleep(config.delay)
 				await msg.channel.send('h!trick');
 				const checkmessage1 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -89,6 +92,7 @@ spook.on('message', async (msg) => {
 				break;
 
 			case false:
+				await sleep(config.delay)
 				await msg.channel.send('h!treat');
 				const checkmessage2 = await msg.channel.fetchMessage(msg.id);
 				if (
@@ -102,5 +106,10 @@ spook.on('message', async (msg) => {
 		return;
 	}
 });
+
+function sleep(ms) {
+	console.log("sleeping")
+	return new Promise(resolve => setTimeout(resolve, ms));
+  }
 
 spook.login(config.token);

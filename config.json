@@ -1,5 +1,6 @@
 {
 	"token": "no leaky licky leaks plzzz",
 	"monster": false,
-	"sp00kguild": ["NOW", "SUPPORT", "MULTI", "SERVER", "YAY"]
+	"sp00kguild": ["NOW", "SUPPORT", "MULTI", "SERVER", "YAY"],
+	"delay": 0
 }
